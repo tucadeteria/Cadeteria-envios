@@ -1,6 +1,6 @@
-const CACHE="cadeteria-v4";
+const CACHE="cadeteria-v5";
 self.addEventListener("install",event=>{
-  event.waitUntil(caches.open(CACHE).then(c=>c.addAll(["./app_actualizada.html","./manifest.json"])));
+  event.waitUntil(caches.open(CACHE).then(c=>c.addAll(["./app.html","./app_actualizada.html","./manifest.json"])));
   self.skipWaiting();
 });
 self.addEventListener("activate",event=>event.waitUntil(self.clients.claim()));
